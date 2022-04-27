@@ -1,4 +1,8 @@
 let input = prompt('Masukan Input : ')
-let result = [...input].reverse()
+let pemisah = [...input]
+let result = []
 
-console.log(result.join(""))
+for (let x = pemisah.length - 1; x >= 0; x--) {
+  result.push(pemisah[x])
+}
+alert(`Output : ${result.join("")}`)

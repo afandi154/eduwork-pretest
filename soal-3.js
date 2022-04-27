@@ -13,4 +13,4 @@ for (let x = 0; x < angka.length; x++) {
   result.push(parseInt(pemisah))
 }
 
-alert(result.join('\n'))
+alert(`${angka}\n${result.join('\n')}`)

@@ -3,9 +3,7 @@ let panjang = input.length
 let pemisah = ""
 let result = []
 
-if (parseInt(input) === 10) {
-  alert(`Hasil : Sepuluh`)
-} else if (parseInt(input) > 0 && parseInt(input) < 100) {
+let switchWord = () => {
   for (let x = 0; x < panjang; x++) {
     pemisah = parseInt(input[x])
     switch (pemisah) {
@@ -41,7 +39,20 @@ if (parseInt(input) === 10) {
         break
     }
   }
-  alert(`Hasil : ${result.join(" puluh ")}`)
+}
+
+if (input == 10) {
+  result.push("sepuluh")
+  alert(`Hasil : ${result}`)
+} else if (input == 11) {
+  result.push("sebelas")
+  alert(`Hasil : ${result}`)
+} else if (parseInt(input) > 11 && parseInt(input) < 20) {
+  switchWord()
+  alert(`Hasil : ${result[1] + "belas"}`)
+} else if (parseInt(input) > 0 && parseInt(input) < 100) {
+  switchWord()
+  alert(`Hasil: ${result.join(" puluh ")} `)
 } else {
   alert('Silahkan masukkan bilangan 1-100')
 }
